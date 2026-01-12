@@ -9,8 +9,8 @@ import StoryWallSection from "@/components/sections/StoryWallSection";
 import BreatheWithMe from "@/components/home/BreatheWithMe";
 import WalkSection from "@/components/sections/WalkSection";
 import Marquee from "@/components/home/Marquee";
-import Mission from "@/components/sections/Mission";
-import Values from "@/components/sections/Values";
+import MissionManifesto from "@/components/sections/MissionManifesto";
+import ValuesSection from "@/components/sections/ValuesSection";
 import TakeAction from "@/components/sections/TakeAction";
 import MegaFooter from "@/components/sections/MegaFooter";
 
@@ -108,11 +108,17 @@ export default function Home() {
                         <WalkSection />
                     </div>
 
-                    {/* 4. White Content Area */}
+                    {/* 4. Marquee Transition */}
                     <div className="relative bg-white z-20">
                         <Marquee />
-                        <Mission />
-                        <Values />
+                    </div>
+
+                    {/* 5. Mission Manifesto (Our Mission + What We Stand For) */}
+                    <MissionManifesto />
+
+                    {/* 6. Values & CTA */}
+                    <div className="relative bg-slate-900 z-20">
+                        <ValuesSection />
                         <TakeAction />
                     </div>
 

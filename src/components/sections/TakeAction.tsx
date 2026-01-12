@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -58,13 +59,18 @@ export default function TakeAction() {
                     </div>
                 ))}
 
-                <div className="shrink-0 w-[400px] flex items-center justify-center">
-                    <div className="w-64 h-64 bg-white rounded-xl p-4 shadow-[0_0_50px_rgba(45,212,191,0.5)] animate-pulse">
-                        {/* Placeholder QR Code */}
-                        <div className="w-full h-full bg-slate-900 flex items-center justify-center text-center p-2">
-                            <span className="text-white font-mono text-xs">DOWNLOAD APP<br />SCAN ME</span>
-                        </div>
+                <div className="shrink-0 w-[400px] flex flex-col items-center justify-center gap-6">
+                    <span className="text-teal-400 font-bold text-xl tracking-widest uppercase">Download App</span>
+                    <div className="w-64 h-64 bg-white rounded-xl p-3 shadow-[0_0_50px_rgba(45,212,191,0.5)]">
+                        <Image
+                            src="/app-qr-code.png"
+                            alt="Download Cosmos Continuum App - Scan QR Code"
+                            width={256}
+                            height={256}
+                            className="w-full h-full object-contain"
+                        />
                     </div>
+                    <span className="text-white/60 font-mono text-sm tracking-wider">SCAN ME</span>
                 </div>
             </div>
         </section>
